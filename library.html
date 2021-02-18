@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="library.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
-    <title>Library</title>
+    <title>Simple Library App</title>
   </head>
   <body>
+    <h1>Simple Library App</h1>
+    <h3>Track your progress!</h3>
+    <form id=bookForm></form>
+    <label for="bookName">Name of Book:</label>
+    <input type='text' name="bookName" id="bookName" required>
+    <br>
+    <br>
+    <label for="author">Author:</label>
+    <input type='text' name="author" id="author">
+    <br>
+    <br>
+    <label for="pages"># of Pages</label>
+    <input type='text' name="pages" id="pages">
+    <br>
+    <br>
+    <label for="readStatus">Finished book?</label>
+    <input type='text' name="readStatus" id="readStatus">
 
+    <script src="library.js"></script>
   </body>  
 </html>
