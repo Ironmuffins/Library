@@ -10,3 +10,9 @@
 .input {
     width: 200px;
 }
+
+#addBook {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+}
