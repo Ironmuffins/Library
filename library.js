@@ -1,23 +1,29 @@
 let myLibrary = [];
+let bookName;
+let author;
+let pages;
+let readStatus;
 
-function Book(name, author, pages, readstatus) {
-    this.name = name
+function Book(bookName, author, pages, readStatus) {
+    this.bookNname = bookName
     this.author = author
     this.pages = pages
-    this.readstatus = readstatus
+    this.readStatus = readStatus
     this.bookinfo = function() {
-     
+
     }
   };
 
-function addBookToLibrary() {
-  console.log('button pressed');
-}
-
-  
-  const HarryPotter = new Book('Harry Potter', 'J.K Rowling', "never read it");
-  //const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkein', '325', 'read it twice');
-  //push
-
 addBook = document.querySelector('#addBook');
 addBook.addEventListener('click', addBookToLibrary)
+
+function addBookToLibrary() {
+  bookName = document.querySelector('#bookName').value;
+  author = document.querySelector('#author').value;
+  pages = document.querySelector('#pages').value;
+  readStatus = document.querySelector('#readStatus').value;
+  let newBook = new Book(bookName, author, pages, readStatus)
+  console.log(newBook);
+  myLibrary.push(newBook);
+  console.log(myLibrary);
+}
