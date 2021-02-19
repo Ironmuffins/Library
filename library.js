@@ -6,7 +6,7 @@ let myLibrary = [book1, book2, book3];
 
 //Object constructor/Blueprint
 function Book(bookName, author, pages, readStatus) {
-    this.bookNname = bookName
+    this.bookName = bookName
     this.author = author
     this.pages = pages
     this.readStatus = readStatus
@@ -37,7 +37,8 @@ function libraryDisplay() {
     let bookItemDiv = document.createElement("div");
     bookItemDiv.className = 'bookItemDiv';
     bookItemDiv.id = "bookItemDiv" + [i];
+    bookItemDiv.textContent = (Object.values(myLibrary[i]));
     libraryDisplayDiv.appendChild(bookItemDiv);
     console.log('iterations');
 }
-}
+};

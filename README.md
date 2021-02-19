@@ -1,5 +1,5 @@
 New features:
-Added 'open library' button which creates a div for each book item.
+'Open Library' function now lists each book's information on separate cards.
 
 Bug fixes:
 None.
@@ -11,6 +11,6 @@ Open Library displays the book info from the library.
 
 Planned features:
 Clear input lines after adding book
-User can open library and see all items
-User can select any item in library and see the info.
+Prevent 'open library' from making duplicates
+When Clicking 'add book' it automatically displays it in the list.
 Make it pretty.
