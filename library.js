@@ -13,7 +13,7 @@ function Book(bookName, author, pages, readStatus) {
 //  this.bookinfo = function() {
 //
 //  }
-  };
+};
 
 //Add Book button
 const addBook = document.querySelector('#addBook');
@@ -25,6 +25,7 @@ function addBookToLibrary() {
   newReadStatus = document.querySelector('#readStatus').value;
   let newBook = new Book(newBookName, newAuthor, newPages, newReadStatus);
   myLibrary.push(newBook);
+  document.getElementById("bookForm").reset();
   console.log(myLibrary);
 };
 
