@@ -27,6 +27,7 @@ function addBookToLibrary() {
   myLibrary.push(newBook);
   document.getElementById("bookForm").reset();
   console.log(myLibrary);
+  console.log(newBookName);
 };
 
 //Display Library
@@ -41,8 +42,13 @@ function libraryDisplay() {
     let bookItemDiv = document.createElement("div");
     bookItemDiv.className = 'bookItemDiv';
     bookItemDiv.id = "bookItemDiv" + [i];
-    bookItemDiv.textContent = (Object.values(myLibrary[i]));
+    bookItemDiv.innerText = (Object.values(myLibrary[i]));
     libraryDisplayDiv.appendChild(bookItemDiv);
     console.log('iterations');
   };
 };
+
+//Create table of book items
+function addBooktotable() {
+  
+}
