@@ -2,7 +2,7 @@ New features:
 None.
 
 Bug fixes:
-Form data now clears after adding a book.
+Form now requires input for name of book, author, and readStatus.
 
 Current features:
 User can add books by using provied form.

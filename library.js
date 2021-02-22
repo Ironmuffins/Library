@@ -19,6 +19,8 @@ function Book(bookName, author, pages, readStatus) {
 const addBook = document.querySelector('#addBook');
 addBook.addEventListener('click', addBookToLibrary);
 function addBookToLibrary() {
+  if (document.querySelector('#bookName').value && document.querySelector('#author').value 
+  && document.querySelector('#readStatus').value){
   newBookName = document.querySelector('#bookName').value;
   newAuthor = document.querySelector('#author').value;
   newPages = document.querySelector('#pages').value;
@@ -28,6 +30,7 @@ function addBookToLibrary() {
   document.getElementById("bookForm").reset();
   console.log(myLibrary);
   console.log(newBookName);
+  };
 };
 
 //Display Library
@@ -50,5 +53,5 @@ function libraryDisplay() {
 
 //Create table of book items
 function addBooktotable() {
-  
+
 }
