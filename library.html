@@ -22,12 +22,18 @@
     <label for="readStatus">Finished book?</label>
     <input type='text' name="readStatus" id="readStatus" class="input" required>
     <br>
-    
+    <br>
     <button id='addBook' type = 'submit'>Add Book</button>
     <button id='openLibrary'>Open Library</button>
   </form>
     </div>  
-    <div class='libraryDisplayDiv'></div>
+    <br>
+    <div class='libraryDisplayDiv'>
+      <div class='griditem'>Name</div>
+      <div class='griditem'>Author</div>
+      <div class='griditem'>Pages</div>
+      <div class='griditem'>Read Status</div>
+    </div>
     <table id=table></table>
     <script src="library.js"></script>
   </body>  

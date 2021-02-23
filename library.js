@@ -38,14 +38,14 @@ const openLibrary = document.querySelector('#openLibrary');
 openLibrary.addEventListener('click', libraryDisplay);
 const libraryDisplayDiv = document.querySelector('.libraryDisplayDiv');
 function libraryDisplay() {
-    while (libraryDisplayDiv.firstChild) {
-      libraryDisplayDiv.removeChild(libraryDisplayDiv.firstChild)
-    };
+ //   while (libraryDisplayDiv.firstChild) {
+ //     libraryDisplayDiv.removeChild(libraryDisplayDiv.firstChild)
+  //  };
   for (let i = 0; i < myLibrary.length; i++) {
     let bookItemDiv = document.createElement("div");
     bookItemDiv.className = 'bookItemDiv';
     bookItemDiv.id = "bookItemDiv" + [i];
-    bookItemDiv.innerText = (Object.values(myLibrary[i]));
+   // bookItemDiv.innerText = (Object.values(myLibrary[i]));
     libraryDisplayDiv.appendChild(bookItemDiv);
     console.log('iterations');
   };

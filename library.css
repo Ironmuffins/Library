@@ -27,8 +27,19 @@ font-size: 20px;
 }
 
 .bookItemDiv {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 50px;
     border: solid black 1px;
-    margin-top: 10px;
+}
+
+.libraryDisplayDiv {
+    display: grid;
+    grid-template-columns: 150px 150px 100px 100px;
+    border: solid black 1px;
+    width: 500px;
+}
+
+.griditem {
+    border: solid black 1px;
+    text-align: center;
 }
