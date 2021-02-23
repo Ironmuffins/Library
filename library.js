@@ -1,4 +1,4 @@
-//Initial variables
+//Initial variables and test examples
 let book1 = new Book('LOTR', 'J.R.R tolkein', '1000', 'yes');
 let book2 = new Book('Homo Deus', 'Yuval Noah Harari', '575', 'yes');
 let book3 = new Book('Pride and Prejudice', 'Somebody?', '750', 'no');
@@ -27,31 +27,47 @@ function addBookToLibrary() {
   newReadStatus = document.querySelector('#readStatus').value;
   let newBook = new Book(newBookName, newAuthor, newPages, newReadStatus);
   myLibrary.push(newBook);
+  addBooktotable()
   document.getElementById("bookForm").reset();
   console.log(myLibrary);
-  console.log(newBookName);
   };
 };
 
 //Display Library
-const openLibrary = document.querySelector('#openLibrary');
-openLibrary.addEventListener('click', libraryDisplay);
+//const openLibrary = document.querySelector('#openLibrary');
+//openLibrary.addEventListener('click', libraryDisplay);
+//const libraryDisplayDiv = document.querySelector('.libraryDisplayDiv');
+//function libraryDisplay() {
+//   while (libraryDisplayDiv.firstChild) {
+//     libraryDisplayDiv.removeChild(libraryDisplayDiv.firstChild)
+//  };
+//  for (let i = 0; i < myLibrary.length; i++) {
+//    let bookItemDiv = document.createElement("div");
+//    bookItemDiv.className = 'bookItemDiv';
+//    bookItemDiv.id = "bookItemDiv" + [i];
+//  bookItemDiv.innerText = (Object.values(myLibrary[i]));
+//    libraryDisplayDiv.appendChild(bookItemDiv);
+//    console.log('iterations');
+//  };
+//};
+
+//Adding new book info to grid. Super messy and dumb, need a more efficient solution
 const libraryDisplayDiv = document.querySelector('.libraryDisplayDiv');
-function libraryDisplay() {
- //   while (libraryDisplayDiv.firstChild) {
- //     libraryDisplayDiv.removeChild(libraryDisplayDiv.firstChild)
-  //  };
-  for (let i = 0; i < myLibrary.length; i++) {
-    let bookItemDiv = document.createElement("div");
-    bookItemDiv.className = 'bookItemDiv';
-    bookItemDiv.id = "bookItemDiv" + [i];
-   // bookItemDiv.innerText = (Object.values(myLibrary[i]));
-    libraryDisplayDiv.appendChild(bookItemDiv);
-    console.log('iterations');
-  };
-};
-
-//Create table of book items
 function addBooktotable() {
-
+  let bookItemDiv = document.createElement("div");
+  bookItemDiv.className = 'griditem';
+  libraryDisplayDiv.appendChild(bookItemDiv);
+  bookItemDiv.innerText = newBookName;
+  let bookItemDiv2 = document.createElement("div");
+  bookItemDiv2.className = 'griditem';
+  libraryDisplayDiv.appendChild(bookItemDiv2);
+  bookItemDiv2.innerText = newAuthor;
+  let bookItemDiv3 = document.createElement("div");
+  bookItemDiv3.className = 'griditem';
+  libraryDisplayDiv.appendChild(bookItemDiv3);
+  bookItemDiv3.innerText = newPages;
+  let bookItemDiv4 = document.createElement("div");
+  bookItemDiv4.className = 'griditem';
+  libraryDisplayDiv.appendChild(bookItemDiv4);
+  bookItemDiv4.innerText = newReadStatus;
 }
