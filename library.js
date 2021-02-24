@@ -1,8 +1,8 @@
 //Initial variables and test examples
-let book1 = new Book('LOTR', 'J.R.R tolkein', '1000', 'yes');
-let book2 = new Book('Homo Deus', 'Yuval Noah Harari', '575', 'yes');
-let book3 = new Book('Pride and Prejudice', 'Somebody?', '750', 'no');
-let myLibrary = [book1, book2, book3];
+//let book1 = new Book('LOTR', 'J.R.R tolkein', '1000', 'yes');
+//let book2 = new Book('Homo Deus', 'Yuval Noah Harari', '575', 'yes');
+//let book3 = new Book('Pride and Prejudice', 'Somebody?', '750', 'no');
+let myLibrary = [];
 
 //Object constructor/Blueprint
 function Book(bookName, author, pages, readStatus) {
@@ -70,4 +70,14 @@ function addBooktotable() {
   bookItemDiv4.className = 'griditem';
   libraryDisplayDiv.appendChild(bookItemDiv4);
   bookItemDiv4.innerText = newReadStatus;
+  let bookItemDiv5 = document.createElement("div");
+  bookItemDiv5.className = 'griditem';
+  libraryDisplayDiv.appendChild(bookItemDiv5);
+  bookItemDiv5.innerText = 'Delete';
+}
+
+//Remove Item
+bookItemDiv5.addEventListener('click', removeitem)
+function removeitem() {
+
 }
