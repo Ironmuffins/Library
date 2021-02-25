@@ -1,8 +1,10 @@
-//Initial variables and test examples
+//Initial variables
+let myLibrary = []; 
+
+//Book examples for testing
 //let book1 = new Book('LOTR', 'J.R.R tolkein', '1000', 'yes');
 //let book2 = new Book('Homo Deus', 'Yuval Noah Harari', '575', 'yes');
 //let book3 = new Book('Pride and Prejudice', 'Somebody?', '750', 'no');
-let myLibrary = [];
 
 //Object constructor/Blueprint
 function Book(bookName, author, pages, readStatus) {
@@ -27,11 +29,50 @@ function addBookToLibrary() {
   newReadStatus = document.querySelector('#readStatus').value;
   let newBook = new Book(newBookName, newAuthor, newPages, newReadStatus);
   myLibrary.push(newBook);
-  addBooktotable()
+  addBookToTable();
   document.getElementById("bookForm").reset();
   console.log(myLibrary);
   };
 };
+
+//A slightly less dumb loop to add book elements to table.
+const libraryDisplayDiv = document.querySelector('.libraryDisplayDiv');
+function addBookToTable() {
+  while (libraryDisplayDiv.firstChild) {
+  libraryDisplayDiv.removeChild(libraryDisplayDiv.firstChild)
+  };
+  for (let i = 0; i < myLibrary.length; i++) {
+    let bookItemDiv = document.createElement("div");
+    bookItemDiv.className = 'griditem';
+    libraryDisplayDiv.appendChild(bookItemDiv);
+    bookItemDiv.innerText = myLibrary[i].bookName;
+    bookItemDiv = document.createElement("div");
+    bookItemDiv.className = 'griditem';
+    libraryDisplayDiv.appendChild(bookItemDiv);
+    bookItemDiv.innerText = myLibrary[i].author;
+    bookItemDiv = document.createElement("div");
+    bookItemDiv.className = 'griditem';
+    libraryDisplayDiv.appendChild(bookItemDiv);
+    bookItemDiv.innerText = myLibrary[i].pages;
+    bookItemDiv = document.createElement("div");
+    bookItemDiv.className = 'griditem';
+    libraryDisplayDiv.appendChild(bookItemDiv);
+    bookItemDiv.innerText = myLibrary[i].readStatus;
+    bookItemDiv = document.createElement("div");
+    bookItemDiv.className = 'griditem';
+    libraryDisplayDiv.appendChild(bookItemDiv);
+    bookItemDiv.innerText = 'Remove';
+  };
+};
+
+
+
+
+//myLibrary.forEach(element => console.log(element));
+
+//  for (const property in myLibrary[0]) {
+///    console.log(`${property}: ${myLibrary[0][property]}`);
+//  }
 
 //Display Library
 //const openLibrary = document.querySelector('#openLibrary');
@@ -50,34 +91,3 @@ function addBookToLibrary() {
 //    console.log('iterations');
 //  };
 //};
-
-//Adding new book info to grid. Super messy and dumb, need a more efficient solution
-const libraryDisplayDiv = document.querySelector('.libraryDisplayDiv');
-function addBooktotable() {
-  let bookItemDiv = document.createElement("div");
-  bookItemDiv.className = 'griditem';
-  libraryDisplayDiv.appendChild(bookItemDiv);
-  bookItemDiv.innerText = newBookName;
-  let bookItemDiv2 = document.createElement("div");
-  bookItemDiv2.className = 'griditem';
-  libraryDisplayDiv.appendChild(bookItemDiv2);
-  bookItemDiv2.innerText = newAuthor;
-  let bookItemDiv3 = document.createElement("div");
-  bookItemDiv3.className = 'griditem';
-  libraryDisplayDiv.appendChild(bookItemDiv3);
-  bookItemDiv3.innerText = newPages;
-  let bookItemDiv4 = document.createElement("div");
-  bookItemDiv4.className = 'griditem';
-  libraryDisplayDiv.appendChild(bookItemDiv4);
-  bookItemDiv4.innerText = newReadStatus;
-  let bookItemDiv5 = document.createElement("div");
-  bookItemDiv5.className = 'griditem';
-  libraryDisplayDiv.appendChild(bookItemDiv5);
-  bookItemDiv5.innerText = 'Delete';
-}
-
-//Remove Item
-bookItemDiv5.addEventListener('click', removeitem)
-function removeitem() {
-
-}
