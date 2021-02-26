@@ -1,8 +1,9 @@
 New features:
-None.
+
+Each book item now has specific id for their elements.
 
 New Bug fixes:
-Changed add book loop to a ForEach loop instead of for loop.
+Made the add book loop less messy.
 
 Current features:
 User can add books by using provied form.
@@ -16,3 +17,4 @@ Make it pretty.
 Add local storage.
 Add online database.
 'Open Library' displays the book info on individual cards.
+flip through spines of books, which will pull up card.

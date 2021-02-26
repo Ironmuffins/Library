@@ -5,6 +5,7 @@
 
 //Initial variables
 let myLibrary = []; 
+let bookItemDiv;
 
 //Object constructor/Blueprint
 function Book(bookName, author, pages, readStatus) {
@@ -35,35 +36,42 @@ function addBookToLibrary() {
   };
 };
 
-//A slightly less dumb loop to add book elements to table.
+//Loop to add book elements to table.
 const libraryDisplayDiv = document.querySelector('.libraryDisplayDiv');
 function addBookToTable() {
   while (libraryDisplayDiv.firstChild) {
   libraryDisplayDiv.removeChild(libraryDisplayDiv.firstChild)
   };
-  myLibrary.forEach(function(bookitem) {
-    let bookItemDiv = document.createElement("div");
-    bookItemDiv.className = 'griditem';
-    libraryDisplayDiv.appendChild(bookItemDiv);
+  myLibrary.forEach(function(bookitem, index) {
+    addGridItem();
+    bookItemDiv.id = "griditem" + index;
     bookItemDiv.innerText = bookitem.bookName;
-    bookItemDiv = document.createElement("div");
-    bookItemDiv.className = 'griditem';
-    libraryDisplayDiv.appendChild(bookItemDiv);
+    addGridItem();
+    bookItemDiv.id = "griditem" + index;
     bookItemDiv.innerText = bookitem.author;
-    bookItemDiv = document.createElement("div");
-    bookItemDiv.className = 'griditem';
-    libraryDisplayDiv.appendChild(bookItemDiv);
+    addGridItem();
+    bookItemDiv.id = "griditem" + index;
     bookItemDiv.innerText = bookitem.pages;
-    bookItemDiv = document.createElement("div");
-    bookItemDiv.className = 'griditem';
-    libraryDisplayDiv.appendChild(bookItemDiv);
+    addGridItem();
+    bookItemDiv.id = "griditem" + index;
     bookItemDiv.innerText = bookitem.readStatus;
-    bookItemDiv = document.createElement("div");
-    bookItemDiv.className = 'griditem';
-    libraryDisplayDiv.appendChild(bookItemDiv);
+    addGridItem();
+    bookItemDiv.id = "griditem" + index;
     bookItemDiv.innerText = 'Remove';
   });
 };
+
+// Add griditem
+function addGridItem() {
+  bookItemDiv = document.createElement("div");
+  bookItemDiv.className = 'griditem';
+  libraryDisplayDiv.appendChild(bookItemDiv);
+};
+
+//Remove book
+function removeBook() {
+
+}
 
 //Display Library
 //const openLibrary = document.querySelector('#openLibrary');
