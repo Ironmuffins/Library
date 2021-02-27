@@ -6,6 +6,7 @@
 //Initial variables
 let myLibrary = []; 
 let bookItemDiv;
+let removeitem;
 
 //Object constructor/Blueprint
 function Book(bookName, author, pages, readStatus) {
@@ -56,8 +57,10 @@ function addBookToTable() {
     bookItemDiv.id = "griditem" + index;
     bookItemDiv.innerText = bookitem.readStatus;
     addGridItem();
-    bookItemDiv.id = "griditem" + index;
+    bookItemDiv.id = "removeitem";
     bookItemDiv.innerText = 'Remove';
+    removeitem = document.querySelector('#removeitem');
+    removeitem.addEventListener('click', removeBook)
   });
 };
 
@@ -69,8 +72,9 @@ function addGridItem() {
 };
 
 //Remove book
-function removeBook() {
 
+function removeBook() {
+  console.log('remove item');
 }
 
 //Display Library

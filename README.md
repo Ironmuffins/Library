@@ -1,6 +1,5 @@
 New features:
-
-Each book item now has specific id for their elements.
+Started remove item function.
 
 New Bug fixes:
 Made the add book loop less messy.
@@ -11,6 +10,7 @@ Added books are added to the library array.
 User can see added books on display grid.
 
 Planned features:
+Fix bug where remove function only works on first book.
 Ability to remove entries.
 Add button to change read status.
 Make it pretty.
