@@ -4,8 +4,12 @@ body {
 h1 {
     text-align: center;
 }
-h3 {
+h2 {
     text-align: center;
+}
+
+label {
+   font-size: 20px;
 }
 #formGrid {
     display:grid;
@@ -44,6 +48,7 @@ text-align: center;
     width: 575px;
     margin: 0 auto;
     background-color: white;
+    font-size: 18px;
 }
 .libraryDisplayDiv {
     display: grid;
