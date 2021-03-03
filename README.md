@@ -1,8 +1,8 @@
 New features:
-Started remove item function.
+
 
 New Bug fixes:
-Made the add book loop less messy.
+None.
 
 Current features:
 User can add books by using provied form.
