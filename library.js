@@ -24,7 +24,7 @@ const addBook = document.querySelector('#addBook');
 addBook.addEventListener('click', addBookToLibrary);
 function addBookToLibrary() {
   if (document.querySelector('#bookName').value && document.querySelector('#author').value 
-  && document.querySelector('#readStatus').value){
+  && document.querySelector('#readStatus').value) {
   newBookName = document.querySelector('#bookName').value;
   newAuthor = document.querySelector('#author').value;
   newPages = document.querySelector('#pages').value;
@@ -57,9 +57,9 @@ function addBookToTable() {
     bookItemDiv.id = "griditem" + index;
     bookItemDiv.innerText = bookitem.readStatus;
     addGridItem();
-    bookItemDiv.id = "removeitem";
+    bookItemDiv.id = "removeitem" + index;
     bookItemDiv.innerText = 'Remove';
-    removeitem = document.querySelector('#removeitem');
+    removeitem = document.querySelector('#removeitem' + index);
     removeitem.addEventListener('click', removeBook)
   });
 };
