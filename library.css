@@ -1,13 +1,9 @@
 body {
     background-color: rgb(240, 240, 240);
 }
-h1 {
+h1, h2 {
     text-align: center;
 }
-h2 {
-    text-align: center;
-}
-
 label {
    font-size: 20px;
 }
@@ -49,6 +45,7 @@ text-align: center;
     margin: 0 auto;
     background-color: white;
     font-size: 18px;
+    font-weight: bold;
 }
 .libraryDisplayDiv {
     display: grid;
