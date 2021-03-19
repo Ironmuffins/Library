@@ -3,7 +3,7 @@
 //let book2 = new Book('Homo Deus', 'Yuval Noah Harari', '575', 'yes');
 //let book3 = new Book('Pride and Prejudice', 'Somebody?', '750', 'no');
 
-//Initial variables
+//Initial global variables
 let myLibrary = []; 
 let bookItemDiv;
 let removeitem;
@@ -14,9 +14,9 @@ function Book(bookName, author, pages, readStatus) {
     this.author = author
     this.pages = pages
     this.readStatus = readStatus
-//  this.bookinfo = function() {
-//
-//  }
+/*  this.bookinfo = function() {
+  }
+*/
 };
 
 //Add Book button
@@ -56,7 +56,9 @@ function addBookToTable() {
     addGridItem();
     bookItemDiv.id = "griditem" + index;
     bookItemDiv.innerText = bookitem.readStatus;
-    addGridItem();
+    bookItemDiv = document.createElement('BUTTON');
+    bookItemDiv.className = 'griditem';
+    libraryDisplayDiv.appendChild(bookItemDiv);
     bookItemDiv.id = "removeitem" + index;
     bookItemDiv.innerText = 'Remove';
     removeitem = document.querySelector('#removeitem' + index);
@@ -72,25 +74,25 @@ function addGridItem() {
 };
 
 //Remove book
-
 function removeBook() {
   console.log('remove item');
 }
 
-//Display Library
-//const openLibrary = document.querySelector('#openLibrary');
-//openLibrary.addEventListener('click', libraryDisplay);
-//const libraryDisplayDiv = document.querySelector('.libraryDisplayDiv');
-//function libraryDisplay() {
-//   while (libraryDisplayDiv.firstChild) {
-//     libraryDisplayDiv.removeChild(libraryDisplayDiv.firstChild)
-//  };
-//  for (let i = 0; i < myLibrary.length; i++) {
-//    let bookItemDiv = document.createElement("div");
-//    bookItemDiv.className = 'bookItemDiv';
-//    bookItemDiv.id = "bookItemDiv" + [i];
-//  bookItemDiv.innerText = (Object.values(myLibrary[i]));
-//    libraryDisplayDiv.appendChild(bookItemDiv);
-//    console.log('iterations');
-//  };
-//};
+/*Display Library
+const openLibrary = document.querySelector('#openLibrary');
+openLibrary.addEventListener('click', libraryDisplay);
+const libraryDisplayDiv = document.querySelector('.libraryDisplayDiv');
+function libraryDisplay() {
+   while (libraryDisplayDiv.firstChild) {
+     libraryDisplayDiv.removeChild(libraryDisplayDiv.firstChild)
+  };
+  for (let i = 0; i < myLibrary.length; i++) {
+    let bookItemDiv = document.createElement("div");
+    bookItemDiv.className = 'bookItemDiv';
+    bookItemDiv.id = "bookItemDiv" + [i];
+  bookItemDiv.innerText = (Object.values(myLibrary[i]));
+    libraryDisplayDiv.appendChild(bookItemDiv);
+    console.log('iterations');
+  };
+};
+*/
