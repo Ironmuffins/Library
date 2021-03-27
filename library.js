@@ -1,10 +1,10 @@
 //Book examples for testing
-//let book1 = new Book('LOTR', 'J.R.R tolkein', '1000', 'yes');
-//let book2 = new Book('Homo Deus', 'Yuval Noah Harari', '575', 'yes');
-//let book3 = new Book('Pride and Prejudice', 'Somebody?', '750', 'no');
+let book1 = new Book('LOTR', 'J.R.R tolkein', '1000', 'yes');
+let book2 = new Book('Homo Deus', 'Yuval Noah Harari', '575', 'yes');
+let book3 = new Book('Pride and Prejudice', 'Jane Austen', '750', 'no');
 
 //Initial global variables
-let myLibrary = []; 
+let myLibrary = [book1, book2, book3]; 
 let bookItemDiv;
 let removeitem;
 
@@ -61,6 +61,7 @@ function addBookToTable() {
     libraryDisplayDiv.appendChild(bookItemDiv);
     bookItemDiv.id = "removeitem" + index;
     bookItemDiv.innerText = 'Remove';
+   // bookItemDiv.onclick = "getID(this.id)"
     removeitem = document.querySelector('#removeitem' + index);
     removeitem.addEventListener('click', removeBook)
   });
@@ -73,8 +74,16 @@ function addGridItem() {
   libraryDisplayDiv.appendChild(bookItemDiv);
 };
 
+//get remove book ID?
+function getID(){
+  console.log()
+}
 //Remove book
-function removeBook() {
+function removeBook(arrayindex) {
+  //arrayindex = ???;
+
+  console.log(indexOf(removeitem));
+  myLibrary.splice(arrayindex, 1);
   console.log('remove item');
 }
 
