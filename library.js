@@ -9,11 +9,12 @@ let bookItemDiv;
 let removeitem;
 
 //Object constructor/Blueprint
-function Book(bookName, author, pages, readStatus) {
+function Book(bookName, author, pages, readStatus, remove) {
     this.bookName = bookName
     this.author = author
     this.pages = pages
     this.readStatus = readStatus
+    this.remove = remove
 /*  this.bookinfo = function() {
   }
 */
